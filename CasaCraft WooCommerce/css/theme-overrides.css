@@ -1,0 +1,172 @@
+/* =========================
+   GLOBAL DARK THEME
+========================= */
+body {
+  background: radial-gradient(circle at top left, #2b145a, #0b0b1e 60%);
+  color: #ffffff;
+}
+
+/* =========================
+   HEADER & NAVBAR
+========================= */
+.header,
+.navigation {
+  background: rgba(10, 8, 30, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.main-menu > li > a {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.main-menu > li > a:hover,
+.main-menu > li.current-menu-item > a {
+  color: #ff7adf !important;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.ps-hero,
+.hero,
+[data-background] {
+  background-size: cover !important;
+  background-position: center;
+  position: relative;
+}
+
+.ps-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(155, 89, 255, 0.45),
+    rgba(255, 77, 109, 0.35),
+    rgba(255, 184, 108, 0.35)
+  );
+}
+
+.ps-hero * {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+.ps-heading::before {
+  background: linear-gradient(90deg, #ff7adf, #ffc371);
+}
+
+/* =========================
+   CARDS (PRODUCT / SERVICE / BLOG)
+========================= */
+.ps-product,
+.ps-block,
+.ps-service,
+.ps-post {
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.03)
+  );
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+  transition: all 0.4s ease;
+}
+
+.ps-product:hover,
+.ps-block:hover,
+.ps-service:hover,
+.ps-post:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 35px 70px rgba(255,122,223,0.35);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.ps-btn {
+  background: linear-gradient(
+    135deg,
+    #ff7adf,
+    #ff4d6d,
+    #ffc371
+  );
+  border: none;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(255,122,223,0.45);
+}
+
+.ps-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(255,122,223,0.6);
+}
+
+/* =========================
+   ICON BLOCKS
+========================= */
+.ps-social li a,
+.ps-list--social li a {
+  background: linear-gradient(135deg, #ff7adf, #ffc371);
+}
+
+.ps-social li a:hover {
+  transform: scale(1.1);
+}
+
+/* =========================
+   FORMS (CONTACT PAGE)
+========================= */
+.form-control {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.form-control:focus {
+  border-color: #ff7adf;
+  box-shadow: 0 0 0 2px rgba(255,122,223,0.3);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.ps-footer {
+  background: radial-gradient(circle at top, #1a0f3a, #070711);
+  color: #ccc;
+}
+
+.ps-footer a {
+  color: #ccc;
+}
+
+.ps-footer a:hover {
+  color: #ff7adf;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes glow {
+  0% { box-shadow: 0 0 20px rgba(255,122,223,0.3); }
+  100% { box-shadow: 0 0 40px rgba(255,122,223,0.6); }
+}
+
+.ps-btn {
+  animation: glow 2.5s infinite alternate;
+}
