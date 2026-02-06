@@ -9860,3 +9860,10 @@ html .bg--parallax {
     cursor: pointer;
   }
 }
+
+@media (max-width: 991px) {
+  .main-menu {
+    display: none;
+    width: 100%;
+  }
+}
