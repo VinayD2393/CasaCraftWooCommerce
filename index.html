@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CasaCraft Store</title>
+  <title>CasaCrafts Store</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -14,125 +14,6 @@
   <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="plugins/owl-carousel/assets/owl.carousel.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- FIXED MEGA MENU + PRODUCT CSS -->
-  <style>
-    /* ================= MEGA MENU ================= */
-    .mega-dropdown {
-      position: relative;
-    }
-
-    .mega-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-  width: 520px;
-
-  background: transparent;        /* FULL TRANSPARENCY */
-  border: 1px solid rgba(0,0,0,0.25); /* BORDER ONLY */
-
-  padding: 20px 25px;
-  border-radius: 10px;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Optional depth */
-  z-index: 999;
-
-  display: flex;
-  justify-content: space-between;
-
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.25s ease;
-}
-
-.mega-dropdown:hover .mega-menu {
-  display: flex;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-    .mega-column {
-      width: 32%;
-    }
-
-    .mega-column h4 {
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .mega-column a {
-      display: block;
-      padding: 6px 0;
-      font-size: 14px;
-      color: #333;
-      cursor: pointer;
-    }
-
-    .mega-column a:hover {
-      color: #ff9800;
-    }
-
-    /* ================= PRODUCTS ================= */
-    .product-section {
-      padding: 80px 0;
-      background: #f9f9f9;
-      display: none;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-      font-weight: 600;
-    }
-
-    .product-card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      text-align: center;
-      margin-bottom: 30px;
-      transition: 0.3s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: contain;
-      margin-bottom: 15px;
-    }
-
-    .product-card h4 {
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
-
-    .product-price {
-      font-weight: 600;
-      margin: 10px 0;
-    }
-
-    .product-card button {
-      background: #ff9800;
-      border: none;
-      padding: 8px 18px;
-      color: #fff;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .product-card button:hover {
-      background: #e68900;
-    }
-  </style>
 </head>
 
 <body>
@@ -146,34 +27,11 @@
       </a>
 
       <ul class="main-menu menu">
-
-        <!-- HOME MEGA MENU -->
-        <li class="mega-dropdown current-menu-item">
-          <a href="#">Home <i class="fa fa-angle-down"></i></a>
-
-          <div class="mega-menu">
-            <div class="mega-column">
-              <h4>Chairs</h4>
-              <a onclick="showProduct('chairs')">View Chairs</a>
-            </div>
-
-            <div class="mega-column">
-              <h4>Beds</h4>
-              <a onclick="showProduct('beds')">View Beds</a>
-            </div>
-
-            <div class="mega-column">
-              <h4>Dining</h4>
-              <a onclick="showProduct('dining')">View Dining</a>
-            </div>
-          </div>
-        </li>
-
+        <li class="current-menu-item"><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact-us.html">Contact</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="blog.html">Blog</a></li>
-
       </ul>
 
       <div class="menu-toggle"><span></span></div>
@@ -181,7 +39,7 @@
   </nav>
 </header>
 
-<!-- ================= SLIDER ================= -->
+<!-- ================= HERO SECTION ================= -->
 <div class="ps-slider--banner owl-slider"
      data-owl-auto="true"
      data-owl-loop="true"
@@ -190,40 +48,55 @@
 
   <div class="ps-product--banner">
     <div class="ps-product__thumbnail">
-      <img src="images/banner/banner-1.png">
+      <img src="images/banner/banner-1.png" alt="">
     </div>
     <div class="ps-product__content">
-      <h3>Comfort & Style</h3>
-      <p>Premium home essentials</p>
+      <h3>Discover Your Style</h3>
+      <p>Shop the latest furniture and home essentials with ease.</p>
+      <a class="ps-btn" href="contact-us.html">Shop Now</a>
     </div>
   </div>
 
   <div class="ps-product--banner">
     <div class="ps-product__thumbnail">
-      <img src="images/banner/banner-2.png">
+      <img src="images/banner/banner-2.png" alt="">
     </div>
     <div class="ps-product__content">
-      <h3>Modern Living</h3>
-      <p>Designed for your lifestyle</p>
+      <h3>Modern & Stylish</h3>
+      <p>High quality designs for your dream home.</p>
+      <a class="ps-btn" href="about.html">Learn More</a>
     </div>
   </div>
 
 </div>
 
-<!-- ================= PRODUCTS ================= -->
-<section id="products" class="product-section">
-  <div class="container">
-    <h2 id="product-title" class="section-title"></h2>
-    <div class="row" id="product-content"></div>
-  </div>
-</section>
-
 <!-- ================= FOOTER ================= -->
+<footer class="ps-footer site-footer">
+  <div class="ps-footer__content">
+    <div class="ps-container">
+      <div class="row">
+        <div class="col-md-6">
+          <a class="ps-logo" href="index.html">
+            <img src="images/logo.png" alt="">
+          </a>
+          <p>
+            Flourish Store is a modern furniture and lifestyle brand offering
+            quality products with elegant design.
+          </p>
+        </div>
 
-  <footer class="ps-footer site-footer">
+        <div class="col-md-6">
+          <h4>Contact Info</h4>
+          <p>50/2, No.4 & 5 3rd Floor, Outer Ring Rd, JP Nagar, Bengaluru, Karnataka 560111</p>
+          <p>+91 7534 9773</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="ps-footer__copyright">
     <div class="ps-container text-center">
-      <p>© 2026 CasaCraft Store. All rights reserved.</p>
+      <p>© 2026 Flourish Store. All rights reserved.</p>
     </div>
   </div>
 </footer>
@@ -233,53 +106,6 @@
 <script src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
-
-<script>
-function showProduct(category) {
-  const section = document.getElementById("products");
-  const title = document.getElementById("product-title");
-  const content = document.getElementById("product-content");
-
-  const data = {
-    chairs: [
-      {n:"Lounge Chair", i:"loungechair.png", p:"₹12,999"},
-      {n:"Arm Chair", i:"armchair.png", p:"₹10,499"},
-      {n:"Accent Chair", i:"accentchair.png", p:"₹9,999"},
-      {n:"Office Chair", i:"officechair.png", p:"₹7,499"}
-    ],
-    beds: [
-      {n:"Queen Bed", i:"queensizebed.png", p:"₹25,999"},
-      {n:"King Bed", i:"kingsizebed.png", p:"₹32,999"},
-      {n:"Wooden Bed", i:"woodenbed.png", p:"₹22,499"},
-      {n:"Storage Bed", i:"storagebed.png", p:"₹28,999"}
-    ],
-    dining: [
-      {n:"4 Seater Dining", i:"4seaterdining.png", p:"₹18,999"},
-      {n:"6 Seater Dining", i:"6seaterdining.png", p:"₹24,999"},
-      {n:"Round Table", i:"rounddining.png", p:"₹20,499"},
-      {n:"Glass Dining", i:"glasstable.png", p:"₹26,999"}
-    ]
-  };
-
-  title.innerText = category.toUpperCase();
-  content.innerHTML = "";
-
-  data[category].forEach(p => {
-    content.innerHTML += `
-      <div class="col-md-3 col-sm-6">
-        <div class="product-card">
-          <img src="images/banner/${p.i}">
-          <h4>${p.n}</h4>
-          <div class="product-price">${p.p}</div>
-          <button>Add to Cart</button>
-        </div>
-      </div>`;
-  });
-
-  section.style.display = "block";
-  section.scrollIntoView({ behavior: "smooth" });
-}
-</script>
 
 </body>
 </html>
