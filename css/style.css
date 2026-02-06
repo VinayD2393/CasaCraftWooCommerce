@@ -9860,86 +9860,90 @@ html .bg--parallax {
     cursor: pointer;
   }
 }
+/* =====================================
+   FINAL MOBILE MENU + HERO FIX
+   ===================================== */
+@media (max-width: 768px) {
 
-/* ===============================
-   MOBILE VIEW FIXES (IMPORTANT)
-   =============================== */
-@media (max-width: 767px) {
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+  }
 
-  /* Header fixes */
+  /* Header stays on top */
   .header {
     position: relative;
-    z-index: 9999;
+    z-index: 10000;
+    background: #fff;
   }
 
-  .navigation .ps-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* Mobile menu sidebar */
+  /* Sidebar menu – full screen */
   .header--sidebar {
     position: fixed;
-    top: 70px;
+    top: 64px; /* height of header */
     left: 0;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 64px);
     background: #ffffff;
-    z-index: 9998;
-    overflow-y: auto;
+    z-index: 9999;
     transform: translateX(-100%);
-    transition: transform 0.4s ease;
+    transition: transform 0.35s ease-in-out;
+    overflow-y: auto;
   }
 
+  /* Open state */
   .header.menu--active .header--sidebar {
     transform: translateX(0);
   }
 
-  /* Menu items */
+  /* Menu list */
   .header--sidebar .menu {
     padding: 20px;
   }
 
   .header--sidebar .menu li {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 
   .header--sidebar .menu li a {
     display: block;
-    width: 100%;
-    padding: 12px 20px;
+    padding: 14px 20px;
     border-radius: 30px;
-    background: linear-gradient(180deg, #FFA945, #DD7A38);
+    background: linear-gradient(180deg, #ff9f43, #e67e22);
     color: #fff;
+    font-weight: 600;
     text-align: center;
-    font-weight: 500;
   }
 
-  /* Hero slider fixes */
+  /* HERO SECTION FIX */
   .ps-slider--banner {
+    position: relative;
+    z-index: 1;
     margin-top: 20px;
   }
 
   .ps-product--banner {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 20px;
   }
 
   .ps-product__thumbnail {
-    order: 1;
+    width: 100%;
+    max-width: 320px;
     margin-bottom: 20px;
   }
 
   .ps-product__thumbnail img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    display: block;
   }
 
   .ps-product__content {
-    order: 2;
+    width: 100%;
   }
 
   .ps-product__content h3 {
@@ -9950,14 +9954,12 @@ html .bg--parallax {
     font-size: 14px;
   }
 
-  /* Owl carousel width fix */
-  .owl-carousel .owl-item {
+  /* Owl carousel width hard fix */
+  .owl-carousel .owl-item,
+  .owl-carousel .owl-stage {
     width: 100% !important;
   }
-
-  /* Prevent horizontal scroll */
-  body {
-    overflow-x: hidden;
-  }
 }
+
+
 
