@@ -121,3 +121,7 @@
   });
 
 })(jQuery);
+
+document.querySelector('.menu-toggle').onclick = function () {
+  document.querySelector('.main-menu').classList.toggle('active');
+};
