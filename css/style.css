@@ -9766,3 +9766,58 @@ html .bg--parallax {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.mega-menu {
+  background: transparent;              /* FULLY TRANSPARENT */
+  border: 1px solid #e5e5e5;             /* SOFT BORDER */
+  border-radius: 10px;
+
+  padding: 16px 20px;
+  min-width: 360px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+/* SHOW ON HOVER */
+.menu-item-has-mega:hover .mega-menu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FLEX ALIGNMENT */
+.mega-menu-inner {
+  display: flex;
+  gap: 36px;                             /* PROPER SPACING */
+}
+
+/* EACH COLUMN */
+.mega-column {
+  min-width: 90px;
+}
+
+/* COLUMN TITLES */
+.mega-column h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* LINKS */
+.mega-column a {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.mega-column a:hover {
+  color: #ff8c00;
+}
